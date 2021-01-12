@@ -5,10 +5,10 @@
         <div class="m-auto">
           <h2 class="text-white text-3xl">DocAssitant</h2>
           <p class="text-white text-2xl my-4">
-            Don't have an <br />
+            Already have an <br />
             Account?
           </p>
-          <button class="btn text-sm pl-6 pr-6 pb-3 pt-3">Sign Up</button>
+          <button class="btn text-sm pl-6 pr-6 pb-3 pt-3">Sign In</button>
         </div>
       </section>
       <section class="column w-2/3 h-full">
