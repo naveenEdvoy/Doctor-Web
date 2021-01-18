@@ -8,36 +8,59 @@
             Already have an <br />
             Account?
           </p>
-          <button class="btn text-sm pl-6 pr-6 pb-3 pt-3">Sign In</button>
+          <button class="btn text-sm pl-6 pr-6 pb-3 pt-3" @click="openLogin">
+            Sign In
+          </button>
         </div>
       </section>
-      <section class="column w-2/3 h-full">
-        <form action="#" class="form">
-          <div class="form__group">
-            <input
-              type="email"
-              class="form__input"
-              placeholder="Email address"
-              id="email"
-              required
-            />
-            <label for="email" class="form__label">Email address</label>
-          </div>
-          <div class="form__group">
-            <input
-              type="text"
-              class="form__input"
-              placeholder="Password"
-              id="password"
-              required
-            />
-            <label for="password" class="form__label">Password</label>
-          </div>
-        </form>
+      <section class="w-2/3 h-full">
+        <div class="h-full">
+          <form action="#" class="form m-auto h-full">
+            <p class="h3 text-center mb-4">Sign Up</p>
+            <div class="form__group">
+              <input
+                type="email"
+                class="form__input"
+                placeholder="Email address"
+                id="email"
+                required
+              />
+              <label for="email" class="form__label">Email address</label>
+            </div>
+            <div class="form__group">
+              <input
+                type="text"
+                class="form__input"
+                placeholder="Password"
+                id="password"
+                required
+              />
+              <label for="password" class="form__label">Password</label>
+            </div>
+            <div>
+              <button
+                type="submit"
+                class="btn text-sm pl-6 pr-6 pb-3 pt-3 border-blue-200 border-2"
+              >
+                Sign UP
+              </button>
+            </div>
+          </form>
+        </div>
       </section>
     </div>
   </div>
 </template>
+
+<script lang="ts">
+import { Vue } from 'vue-class-component'
+
+export default class Register extends Vue {
+  public openLogin() {
+    this.$router.push('/login')
+  }
+}
+</script>
 <style lang="scss">
 .main-div {
   overflow: hidden;
@@ -57,10 +80,12 @@
   border-radius: 1.5rem;
   background-color: white;
 }
-
 .form {
+  text-align: left;
   &__group:not(:last-child) {
     // margin-bottom: 2rem;
+    align-items: center;
+    justify-content: center;
     border-color: purple;
   }
 
